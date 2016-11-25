@@ -2,8 +2,7 @@ import random
 order = int(input("Matrix order: "))
 mat1 = []
 mat2 = []
-mat_add = []
-mat_sub = []
+
 for i in range(0,order):        # create a loop that fill the list with lists
     mat1.append([])
     mat2.append([])
@@ -12,6 +11,7 @@ for i in range(0,order):        # create a loop that fill the list with lists
         mat2[i].append(random.randint(1,3))
       
 def add (mat1,mat2):
+    mat_add = []
     for i in range(len(mat1)):     # for every list in mat1 creates a new list where the sum will be
         mat_add.append([])
         for j in range(len(mat1[0])):   # adds to list the sum of elements from the 2 matrix
@@ -19,6 +19,7 @@ def add (mat1,mat2):
     return(mat_add)
 
 def sub(mat1,mat2):
+    mat_sub = []
     for i in range(len(mat1)):      # for every list in mat1 creates a new list where the substraction result will be placed
         mat_sub.append([])
         for j in range(len(mat1[0])):
