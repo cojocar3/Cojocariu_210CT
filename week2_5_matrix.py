@@ -30,10 +30,10 @@ def mult(mat1,mat2):
     for i in range(len(mat1)):
         mat_mult.append([])
         for j in range(len(mat1)):
-            b = 0
+            x = 0
             for k in range(len(mat1[0])):
-                b = b+mat1[i][k]*mat2[k][j]
-            mat_mult[i].append(b)
+                x = x+mat1[i][k]*mat2[k][j]
+            mat_mult[i].append(x)
     return mat_mult
 def mult_by_nr(nr,mat1):
     for i in range(len(mat1)):
