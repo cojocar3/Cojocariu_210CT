@@ -28,7 +28,7 @@ class Graph:
         visited = []
         queue.insert(0,n)
         while queue != []:
-            current = queue.pop()
+            current = queue.pop(0)
             if current not in visited:
                 visited.append(current)
             for i in g.get_edge(current):
