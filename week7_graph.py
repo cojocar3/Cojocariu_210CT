@@ -34,7 +34,10 @@ class Graph:
             for i in g.get_edge(current):
                 if i not in visited:
                     queue.insert(0,i)
-        print ('BFS: ',visited)
+        text_file = open("BFS.txt", "w")
+        for i in visited:
+            text_file.write(i+' ')
+        text_file.close()
         return visited
     def DFS(G,n):
         stack = []
@@ -47,7 +50,10 @@ class Graph:
             for i in g.get_edge(current):
                 if i not in visited:
                     stack.append(i)
-        print ('DFS: ',visited)
+        text_file = open("DFS.txt", "w")
+        for i in visited:
+            text_file.write(i+' ')
+        text_file.close()
         return visited
         
 
@@ -79,7 +85,3 @@ if __name__ == '__main__':
 
     g.BFS('A')
     g.DFS('A')
-
-    
-    
-        
